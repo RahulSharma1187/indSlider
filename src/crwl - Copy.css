@@ -14,7 +14,6 @@ body{
     width: 1920px;
     height: 790px;
     position: relative;
-    background: #000;
 }
 
 .slider .slider-btn{
@@ -64,13 +63,13 @@ body{
 
 .slider-img .imgName,
 .slider-img .slider-Txt {
-    transition: transform 3s ease-in;
+    transition: transform 1s ease-in;
 }
 
 .slider-img.inactive {
     display: block;
     /* opacity: 0; */
-    filter: blur(20px);
+    filter: blur(10px);
 }
 
 .slider-img.active {
@@ -80,15 +79,15 @@ body{
 }
 
 .slider-img.active.animate .slider-Txt {
-    animation: scaleTxt 2s ease-in-out forwards;
-    animation-delay: 0.5s; 
-}  
+    animation: scaleTxt 4s forwards;
+    animation-delay: 0.5s; /* Delay for imgName animation */
+}
 
 .slider-img.active.animate .imgName {
-    animation: scaleImg 3s ease-in-out forwards;
-    animation-delay: 0.5s; 
-} 
- 
+    animation: scaleImg 1.5s forwards;
+    animation-delay: 0.5s; /* Delay for imgName animation */
+}
+  
 @keyframes scaleTxt {
     0% {
         transform: scale(1);
@@ -102,12 +101,9 @@ body{
     0% {
         transform: scale(1);
     }
-    70% {
-        transform: scale(5);
-        filter: blur(0);
-    }
     100% {
         transform: scale(5);
-        filter: blur(20px);
+        filter: blur(10px);
     }
 }
+  

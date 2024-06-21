@@ -41,14 +41,14 @@ function Crwl() {
       setSlider((prev) =>
         direction === 'next' ? (prev === data.length - 1 ? 0 : prev + 1) : (prev === 0 ? data.length - 1 : prev - 1)
       );
-    }, 1200);
+    }, 3000);
   };
 
 
   useEffect(() => {
     const interval = setInterval(() => {
       handleSlideChange('next');
-    }, 3000); // Change slide every 3 seconds
+    }, 3200); // Change slide every 3 seconds
 
     // Clear interval on component unmount
     return () => clearInterval(interval);
