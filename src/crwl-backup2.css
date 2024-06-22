@@ -70,23 +70,23 @@ body{
 .slider-img.inactive {
     display: block;
     /* opacity: 0; */
-    filter: brightness(0.2) contrast(2) blur(20px);
+    filter: blur(20px);
 }
 
 .slider-img.active {
     display: block;
     /* opacity: 1; */
-    filter: brightness(1) contrast(1) blur(0);
+    filter: blur(0);
 }
 
 .slider-img.active.animate .slider-Txt {
     animation: scaleTxt 2s ease-in-out forwards;
-    animation-delay: 3s; 
+    animation-delay: 0.5s; 
 }  
 
 .slider-img.active.animate .imgName {
     animation: scaleImg 3s ease-in-out forwards;
-    animation-delay: 3s; 
+    animation-delay: 0.5s; 
 } 
  
 @keyframes scaleTxt {
@@ -101,18 +101,13 @@ body{
 @keyframes scaleImg {
     0% {
         transform: scale(1);
-        filter: brightness(1) contrast(1) blur(0);
     }
     70% {
-        transform: scale(2);
-        filter: brightness(0.8) contrast(1.5) blur(0);
-    }
-    80% {
-        transform: scale(2);
-        filter: brightness(0.5) contrast(1.5) blur(20px);
+        transform: scale(5);
+        filter: blur(0);
     }
     100% {
-        transform: scale(2);
-        filter: brightness(0.2) contrast(2) blur(20px);
+        transform: scale(5);
+        filter: blur(20px);
     }
 }
